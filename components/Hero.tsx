@@ -52,49 +52,25 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background — deep governmental gradient simulating a building / flags */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            'linear-gradient(135deg, #0C1628 0%, #12213a 35%, #1a2e4a 55%, #0e1e35 75%, #0C1628 100%)',
-        }}
-      >
-        {/* Architectural column / pillar effect */}
-        <div
-          className="absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage: `repeating-linear-gradient(
-              90deg,
-              transparent,
-              transparent 80px,
-              rgba(201,168,76,0.4) 80px,
-              rgba(201,168,76,0.4) 82px
-            )`,
-          }}
+      {/* Background photo — international flags / governmental */}
+      <div className="absolute inset-0 z-0">
+        {/* Real photo */}
+        <img
+          src="https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=2400&q=80"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Subtle radial glow */}
+        {/* Dark navy tint so the photo reads as deep navy */}
+        <div className="absolute inset-0 bg-[#0C1628]/75" />
+        {/* Subtle gold radial glow on left */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%)',
+              'radial-gradient(ellipse at 15% 55%, rgba(201,168,76,0.12) 0%, transparent 55%)',
           }}
         />
-        {/* Flag stripe suggestion — bottom right */}
-        <div className="absolute bottom-0 right-0 w-1/2 h-full opacity-5 overflow-hidden">
-          {[...Array(7)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-full"
-              style={{
-                height: `${100 / 13}%`,
-                top: `${(i * 200) / 13}%`,
-                background: i % 2 === 0 ? '#C9A84C' : 'transparent',
-              }}
-            />
-          ))}
-        </div>
       </div>
 
       {/* Left heavy gradient overlay */}

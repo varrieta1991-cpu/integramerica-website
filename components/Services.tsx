@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
 
 const PHONE_HREF = 'tel:+15613179253';
@@ -6,38 +7,42 @@ const services = [
   {
     number: '01',
     name: 'Apostille',
-    description:
-      'Federal & state-level authentication for Hague Convention countries',
+    description: 'Federal & state-level authentication for Hague Convention countries',
     detail:
       'We are leaders in Hague Apostille certification across all 50 states. Common documents include birth and death certificates, powers of attorney, corporate certifications, and educational diplomas. Swift turnaround, cost-effective processing.',
     href: PHONE_HREF,
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500&q=80',
+    imageAlt: 'Legal document with official seal',
   },
   {
     number: '02',
     name: 'Document Legalization',
-    description:
-      'Consular certification for non-Hague nations worldwide',
+    description: 'Consular certification for non-Hague nations worldwide',
     detail:
       'For countries not party to the Hague Convention, we handle full consular legalization — coordinating with the relevant embassy or consulate on your behalf from start to finish.',
     href: PHONE_HREF,
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=500&q=80',
+    imageAlt: 'Official documents and paperwork',
   },
   {
     number: '03',
     name: 'Certified Translations',
-    description:
-      'Legally precise translations for courts, embassies, and businesses',
+    description: 'Legally precise translations for courts, embassies, and businesses',
     detail:
       'Our team of expert translators delivers culturally accurate, legally recognized certified translations for personal, legal, medical, and technical documents — accepted by courts, consulates, and government agencies.',
     href: PHONE_HREF,
+    image: 'https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=500&q=80',
+    imageAlt: 'Open books representing translation and languages',
   },
   {
     number: '04',
     name: 'Immigration Advisory',
-    description:
-      'Expert guidance on all pathways to U.S. legal residency',
+    description: 'Expert guidance on all pathways to U.S. legal residency',
     detail:
       'With 95+ pathways to U.S. legal status, our advisors provide personalized consultations covering family-based, employment-based, asylum, diversity lottery, EB-5, U Visa, TPS, and more. Straightforward guidance with no false promises.',
     href: PHONE_HREF,
+    image: 'https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&w=500&q=80',
+    imageAlt: 'Passport and travel documents',
   },
 ];
 
@@ -45,8 +50,15 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-[#0C1628] py-20 lg:py-28"
+      className="relative bg-[#0C1628] py-20 lg:py-28 overflow-hidden"
     >
+      {/* Atmospheric background photo with heavy overlay */}
+      <img
+        src="https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?auto=format&fit=crop&w=2400&q=60"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.08]"
+      />
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section header */}
         <ScrollReveal className="mb-16 lg:mb-20">
@@ -72,7 +84,7 @@ export default function Services() {
           {services.map((service, index) => (
             <ScrollReveal key={service.number} delay={index * 80}>
               <div className="service-item group pl-6 py-10 lg:py-12 hover:pl-8 transition-all duration-300">
-                <div className="grid grid-cols-1 lg:grid-cols-[80px_1fr_auto] gap-4 lg:gap-8 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-[80px_1fr_160px] gap-4 lg:gap-8 items-center">
                   {/* Number */}
                   <span className="text-[#C9A84C]/60 font-mono text-sm font-semibold tracking-widest mt-1">
                     {service.number}
@@ -89,19 +101,27 @@ export default function Services() {
                     <p className="text-white/40 text-sm lg:text-base leading-relaxed max-w-2xl">
                       {service.detail}
                     </p>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex items-start lg:items-center mt-2 lg:mt-4">
                     <a
                       href={service.href}
-                      className="inline-flex items-center gap-2 text-[#C9A84C] text-sm font-semibold hover:gap-3 transition-all duration-200 whitespace-nowrap group/link"
+                      className="inline-flex items-center gap-2 text-[#C9A84C] text-sm font-semibold hover:gap-3 transition-all duration-200 group/link"
                     >
-                      Learn more
+                      Get a quote
                       <span className="transform group-hover/link:translate-x-1 transition-transform duration-200">
                         &rarr;
                       </span>
                     </a>
+                  </div>
+
+                  {/* Thumbnail image */}
+                  <div className="hidden lg:block relative h-28 w-full overflow-hidden opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                    <Image
+                      src={service.image}
+                      alt={service.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="160px"
+                    />
+                    <div className="absolute inset-0 bg-[#0C1628]/40 group-hover:bg-[#0C1628]/10 transition-colors duration-300" />
                   </div>
                 </div>
               </div>
