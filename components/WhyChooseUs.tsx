@@ -77,8 +77,8 @@ export default function WhyChooseUs() {
               {/* Main image */}
               <div className="relative h-[560px] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85"
-                  alt="Professional consultation at Integramerica"
+                  src="/images/document-sealed.png"
+                  alt="Sealed official document on desk"
                   fill
                   className="object-cover object-center"
                   sizes="420px"
@@ -99,8 +99,8 @@ export default function WhyChooseUs() {
               {/* Second small image offset */}
               <div className="absolute -bottom-8 -left-8 w-40 h-40 overflow-hidden border-4 border-[#F7F4EE] shadow-xl hidden xl:block">
                 <Image
-                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=400&q=80"
-                  alt="Official document with seal"
+                  src="/images/apostille-dark.png"
+                  alt="Apostille document in leather folder"
                   fill
                   className="object-cover"
                   sizes="160px"

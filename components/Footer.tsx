@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-5 flex items-center gap-4">
-              <div className="relative shrink-0 w-16 h-16 ring-1 ring-[#C9A84C]/30 overflow-hidden rounded-sm">
+              <div className="relative shrink-0 w-16 h-16 overflow-hidden">
                 <Image
                   src="/logo.jpeg"
                   alt="Integramerica"

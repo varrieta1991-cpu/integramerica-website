@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 const PHONE_NUMBER = '(561) 317-9253';
 const PHONE_HREF = 'tel:+15613179253';
-const WHATSAPP_HREF = 'https://wa.me/15613179253';
 
 const navLinks = [
   { label: 'Services', href: '#services' },
@@ -39,13 +38,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="relative shrink-0 w-11 h-11 lg:w-13 lg:h-13 ring-1 ring-[#C9A84C]/40 group-hover:ring-[#C9A84C]/80 transition-all duration-300 overflow-hidden rounded-sm">
+            <div className="relative shrink-0 w-12 h-12 lg:w-14 lg:h-14 overflow-hidden">
               <Image
                 src="/logo.jpeg"
                 alt="Integramerica"
                 fill
-                className="object-cover object-top scale-[1.08]"
-                sizes="52px"
+                className="object-cover object-top"
+                sizes="56px"
                 priority
               />
             </div>
@@ -76,17 +75,18 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href={PHONE_HREF}
-              className="text-[#C9A84C] text-sm font-semibold tracking-wide hover:text-white transition-colors"
+              className="bg-[#C9A84C] hover:bg-[#b8943e] text-[#0C1628] text-sm font-bold px-5 py-2.5 transition-colors duration-200 flex items-center gap-2"
             >
+              <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 7a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.25 1.01l-2.2 2.22z" />
+              </svg>
               {PHONE_NUMBER}
             </a>
             <a
-              href={WHATSAPP_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#C9A84C] hover:bg-[#b8943e] text-[#0C1628] text-sm font-bold px-5 py-2.5 transition-colors duration-200"
+              href="#contact"
+              className="border border-[#C9A84C]/60 hover:border-[#C9A84C] text-[#C9A84C] hover:text-white text-sm font-bold px-5 py-2.5 transition-colors duration-200"
             >
-              WhatsApp
+              Contact Us
             </a>
           </div>
 
@@ -140,12 +140,11 @@ export default function Header() {
               Call: {PHONE_NUMBER}
             </a>
             <a
-              href={WHATSAPP_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
               className="bg-[#C9A84C] text-[#0C1628] font-bold text-base text-center py-3"
             >
-              WhatsApp Us
+              Contact Us
             </a>
           </div>
         </nav>

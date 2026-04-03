@@ -11,8 +11,8 @@ const services = [
     detail:
       'We are leaders in Hague Apostille certification across all 50 states. Common documents include birth and death certificates, powers of attorney, corporate certifications, and educational diplomas. Swift turnaround, cost-effective processing.',
     href: PHONE_HREF,
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500&q=80',
-    imageAlt: 'Legal document with official seal',
+    image: '/images/apostille-certificate.png',
+    imageAlt: 'Apostille certificate with gold seal',
   },
   {
     number: '02',
@@ -21,8 +21,8 @@ const services = [
     detail:
       'For countries not party to the Hague Convention, we handle full consular legalization — coordinating with the relevant embassy or consulate on your behalf from start to finish.',
     href: PHONE_HREF,
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=500&q=80',
-    imageAlt: 'Official documents and paperwork',
+    image: '/images/legalization-stamps.png',
+    imageAlt: 'Bundle of officially stamped and sealed legalization documents',
   },
   {
     number: '03',
@@ -31,8 +31,8 @@ const services = [
     detail:
       'Our team of expert translators delivers culturally accurate, legally recognized certified translations for personal, legal, medical, and technical documents — accepted by courts, consulates, and government agencies.',
     href: PHONE_HREF,
-    image: 'https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=500&q=80',
-    imageAlt: 'Open books representing translation and languages',
+    image: '/images/documents-wax.png',
+    imageAlt: 'Official documents with wax seals on a desk',
   },
   {
     number: '04',
@@ -41,8 +41,8 @@ const services = [
     detail:
       'We help you understand available options and connect you with the right process. Our team covers family-based, employment-based, asylum, diversity lottery, EB-5, U Visa, TPS, and more — guiding you every step of the way.',
     href: PHONE_HREF,
-    image: 'https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&w=500&q=80',
-    imageAlt: 'Passport and travel documents',
+    image: '/images/immigration-advisory.png',
+    imageAlt: 'Passports and immigration documents with world map',
   },
 ];
 
@@ -54,10 +54,10 @@ export default function Services() {
     >
       {/* Atmospheric background photo with heavy overlay */}
       <img
-        src="https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?auto=format&fit=crop&w=2400&q=60"
+        src="/images/documents-desk.png"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18]"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.14]"
       />
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section header */}
