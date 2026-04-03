@@ -61,24 +61,16 @@ export default function Hero() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Dark navy tint so the photo reads as deep navy */}
-        <div className="absolute inset-0 bg-[#0C1628]/75" />
-        {/* Subtle gold radial glow on left */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(ellipse at 15% 55%, rgba(201,168,76,0.12) 0%, transparent 55%)',
-          }}
-        />
+        {/* Light navy tint — just enough to cool the photo */}
+        <div className="absolute inset-0 bg-[#0C1628]/40" />
       </div>
 
-      {/* Left heavy gradient overlay */}
+      {/* Left-heavy gradient: dark for text readability, fades to semi-transparent right */}
       <div
         className="absolute inset-0 z-10"
         style={{
           background:
-            'linear-gradient(to right, rgba(12,22,40,0.98) 0%, rgba(12,22,40,0.85) 40%, rgba(12,22,40,0.4) 70%, transparent 100%)',
+            'linear-gradient(to right, rgba(12,22,40,0.92) 0%, rgba(12,22,40,0.75) 40%, rgba(12,22,40,0.25) 70%, rgba(12,22,40,0.1) 100%)',
         }}
       />
 

@@ -57,7 +57,7 @@ export default function Services() {
         src="https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?auto=format&fit=crop&w=2400&q=60"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.08]"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18]"
       />
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section header */}
