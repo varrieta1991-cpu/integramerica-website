@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import TrustStrip from '@/components/TrustStrip';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Services from '@/components/Services';
+import HowItWorks from '@/components/HowItWorks';
 import ReviewTicker from '@/components/ReviewTicker';
 import ReviewsGrid from '@/components/ReviewsGrid';
 import ServiceAreas from '@/components/ServiceAreas';
@@ -20,6 +21,7 @@ export default function Home() {
         <TrustStrip />
         <WhyChooseUs />
         <Services />
+        <HowItWorks />
         <ReviewTicker />
         <ReviewsGrid />
         <ServiceAreas />

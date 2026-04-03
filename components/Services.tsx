@@ -39,7 +39,7 @@ const services = [
     name: 'Immigration Advisory',
     description: 'Expert guidance on all pathways to U.S. legal residency',
     detail:
-      'With 95+ pathways to U.S. legal status, our advisors provide personalized consultations covering family-based, employment-based, asylum, diversity lottery, EB-5, U Visa, TPS, and more. Straightforward guidance with no false promises.',
+      'We help you understand available options and connect you with the right process. Our team covers family-based, employment-based, asylum, diversity lottery, EB-5, U Visa, TPS, and more — guiding you every step of the way.',
     href: PHONE_HREF,
     image: 'https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&w=500&q=80',
     imageAlt: 'Passport and travel documents',
