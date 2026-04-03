@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const PHONE_NUMBER = '(561) 317-9253';
@@ -37,13 +38,25 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex flex-col leading-none group">
-            <span className="font-serif font-bold text-white text-xl lg:text-2xl tracking-wide">
-              INTEGRAMERICA
-            </span>
-            <span className="text-[#C9A84C] text-[10px] lg:text-xs tracking-[0.2em] uppercase font-sans">
-              Document Experts Since 2004
-            </span>
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="relative shrink-0 w-11 h-11 lg:w-13 lg:h-13 ring-1 ring-[#C9A84C]/40 group-hover:ring-[#C9A84C]/80 transition-all duration-300 overflow-hidden rounded-sm">
+              <Image
+                src="/logo.jpeg"
+                alt="Integramerica"
+                fill
+                className="object-cover object-top scale-[1.08]"
+                sizes="52px"
+                priority
+              />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="font-serif font-bold text-white text-lg lg:text-xl tracking-wide">
+                INTEGRAMERICA
+              </span>
+              <span className="text-[#C9A84C] text-[9px] lg:text-[10px] tracking-[0.25em] uppercase font-sans mt-0.5">
+                Document Experts Since 2004
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}

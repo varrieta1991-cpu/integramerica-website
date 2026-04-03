@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const PHONE_NUMBER = '(561) 317-9253';
 const PHONE_HREF = 'tel:+15613179253';
 const WHATSAPP_HREF = 'https://wa.me/15613179253';
@@ -26,13 +28,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Col 1 — Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="mb-4">
-              <p className="font-serif font-bold text-white text-2xl tracking-wide">
-                INTEGRAMERICA
-              </p>
-              <p className="text-[#C9A84C] text-xs tracking-[0.2em] uppercase mt-1">
-                Since 2004
-              </p>
+            <div className="mb-5 flex items-center gap-4">
+              <div className="relative shrink-0 w-16 h-16 ring-1 ring-[#C9A84C]/30 overflow-hidden rounded-sm">
+                <Image
+                  src="/logo.jpeg"
+                  alt="Integramerica"
+                  fill
+                  className="object-cover object-top scale-[1.08]"
+                  sizes="64px"
+                />
+              </div>
+              <div>
+                <p className="font-serif font-bold text-white text-xl tracking-wide leading-tight">
+                  INTEGRAMERICA
+                </p>
+                <p className="text-[#C9A84C] text-[10px] tracking-[0.22em] uppercase mt-1">
+                  Since 2004
+                </p>
+              </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               Leaders in Document Legalization in the United States. Trusted by
