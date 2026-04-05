@@ -15,7 +15,7 @@ const steps = [
     number: '02',
     title: 'We Review & Quote',
     description:
-      'Within hours, you\'ll receive a clear quote with the exact cost and turnaround time. No hidden fees, no surprises.',
+      'Within hours, you\'ll receive a clear quote with the exact cost and timeline based on your specific document and destination. No hidden fees, no surprises.',
     detail: 'Same-day options available for urgent requests.',
   },
   {
@@ -45,7 +45,7 @@ export default function HowItWorks() {
               How It Works
             </h2>
             <p className="text-white/50 text-base lg:text-lg max-w-sm leading-relaxed">
-              Most clients have their document certified and back in hand within 24–48 hours.
+              We guide you through every step and keep you informed throughout the process.
             </p>
           </div>
         </ScrollReveal>

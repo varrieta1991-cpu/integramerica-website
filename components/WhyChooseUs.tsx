@@ -12,13 +12,13 @@ const reasons = [
     number: '02',
     title: 'Bilingual Team',
     description:
-      'All services available in English and Spanish. No language barriers, no confusion — just clear, direct communication in the language you are most comfortable with.',
+      'All services available in English and Spanish. No language barriers, no confusion. Just clear, direct communication in the language you are most comfortable with.',
   },
   {
     number: '03',
     title: 'End-to-End Handling',
     description:
-      'We manage every step — verification, authentication, notarization, and submission — so you do not have to coordinate between multiple agencies or track your own documents.',
+      'We manage every step including verification, authentication, notarization, and submission so you do not have to coordinate between multiple agencies or track your own documents.',
   },
   {
     number: '04',

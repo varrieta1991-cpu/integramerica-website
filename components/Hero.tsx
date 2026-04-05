@@ -85,12 +85,12 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.08] mb-6 opacity-0 animate-[fadeInUp_0.7s_cubic-bezier(0.22,1,0.36,1)_0.2s_forwards]">
-            Apostille & Document Legalization — Fast, Accurate, Accepted
+            Apostille & Document Legalization. Fast, Accurate, Accepted.
           </h1>
 
           {/* Authority badges */}
           <div className="flex flex-wrap gap-2 mb-6 opacity-0 animate-[fadeInUp_0.7s_cubic-bezier(0.22,1,0.36,1)_0.3s_forwards]">
-            {['USCIS-Compliant', 'Consulates', 'International Use', '24–48 Hr Turnaround'].map((badge) => (
+            {['USCIS-Compliant', 'Consulates', 'International Use', 'Bilingual Support'].map((badge) => (
               <span key={badge} className="text-[10px] font-bold tracking-[0.18em] uppercase text-[#0C1628] bg-[#C9A84C] px-3 py-1">
                 {badge}
               </span>

@@ -9,7 +9,7 @@ const services = [
     name: 'Apostille',
     description: 'Federal & state-level authentication for Hague Convention countries',
     detail:
-      'We are leaders in Hague Apostille certification across all 50 states. Common documents include birth and death certificates, powers of attorney, corporate certifications, and educational diplomas. Swift turnaround, cost-effective processing.',
+      'We are leaders in Hague Apostille certification across all 50 states. Common documents include birth and death certificates, powers of attorney, corporate certifications, and educational diplomas. Cost-effective and reliable processing.',
     href: PHONE_HREF,
     image: '/images/apostille-certificate.png',
     imageAlt: 'Apostille certificate with gold seal',
@@ -19,7 +19,7 @@ const services = [
     name: 'Document Legalization',
     description: 'Consular certification for non-Hague nations worldwide',
     detail:
-      'For countries not party to the Hague Convention, we handle full consular legalization — coordinating with the relevant embassy or consulate on your behalf from start to finish.',
+      'For countries not party to the Hague Convention, we handle full consular legalization by coordinating with the relevant embassy or consulate on your behalf from start to finish.',
     href: PHONE_HREF,
     image: '/images/legalization-stamps.png',
     imageAlt: 'Bundle of officially stamped and sealed legalization documents',
@@ -29,7 +29,7 @@ const services = [
     name: 'Certified Translations',
     description: 'Legally precise translations for courts, embassies, and businesses',
     detail:
-      'Our team of expert translators delivers culturally accurate, legally recognized certified translations for personal, legal, medical, and technical documents — accepted by courts, consulates, and government agencies.',
+      'Our team of expert translators delivers culturally accurate, legally recognized certified translations for personal, legal, medical, and technical documents. Accepted by courts, consulates, and government agencies.',
     href: PHONE_HREF,
     image: '/images/documents-wax.png',
     imageAlt: 'Official documents with wax seals on a desk',
@@ -39,7 +39,7 @@ const services = [
     name: 'Immigration Advisory',
     description: 'Expert guidance on all pathways to U.S. legal residency',
     detail:
-      'We help you understand available options and connect you with the right process. Our team covers family-based, employment-based, asylum, diversity lottery, EB-5, U Visa, TPS, and more — guiding you every step of the way.',
+      'We help you understand available options and connect you with the right process. Our team covers family-based, employment-based, asylum, diversity lottery, EB-5, U Visa, TPS, and more. We guide you every step of the way.',
     href: PHONE_HREF,
     image: '/images/immigration-advisory.png',
     imageAlt: 'Passports and immigration documents with world map',
