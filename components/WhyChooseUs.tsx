@@ -30,82 +30,108 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="bg-[#F7F4EE] py-20 lg:py-28">
+    <section id="why-us" className="bg-[#F7F4EE] py-20 lg:py-28 overflow-hidden">
+      {/* Decorative top rule */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 xl:gap-20 items-start">
+        <div className="h-px bg-gradient-to-r from-[#C9A84C] via-[#C9A84C]/30 to-transparent mb-16 lg:mb-20" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px] gap-16 xl:gap-24 items-start">
 
           {/* Left — header + numbered rows */}
           <div>
-            <ScrollReveal className="mb-14 lg:mb-16">
-              <div className="flex items-center gap-4 mb-4">
+            <ScrollReveal className="mb-12">
+              <div className="flex items-center gap-4 mb-5">
                 <span className="block w-8 h-px bg-[#C9A84C]" />
                 <span className="text-[#C9A84C] text-xs font-semibold tracking-[0.3em] uppercase">
                   Why Integramerica
                 </span>
               </div>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1628] max-w-xl leading-tight">
-                Experience That Cannot Be Replicated
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold text-[#0C1628] leading-[1.1]">
+                Experience That Cannot<br className="hidden sm:block" /> Be Replicated
               </h2>
             </ScrollReveal>
 
-            <div className="space-y-0 divide-y divide-[#0C1628]/10">
+            <div className="divide-y divide-[#0C1628]/8">
               {reasons.map((reason, index) => (
                 <ScrollReveal
                   key={reason.number}
-                  delay={index * 100}
-                  className="group grid grid-cols-[60px_1fr] gap-6 py-8 lg:py-10 hover:bg-[#0C1628]/[0.02] transition-colors duration-200"
+                  delay={index * 80}
                 >
-                  <span className="font-serif text-4xl lg:text-5xl font-bold text-[#C9A84C] leading-none">
-                    {reason.number}
-                  </span>
-                  <div>
-                    <h3 className="font-serif text-xl lg:text-2xl font-bold text-[#0C1628] leading-tight mb-2">
-                      {reason.title}
-                    </h3>
-                    <p className="text-[#0C1628]/65 text-base leading-relaxed">
-                      {reason.description}
-                    </p>
+                  <div className="group flex gap-7 py-7 lg:py-8">
+                    {/* Number with vertical accent line */}
+                    <div className="flex flex-col items-center gap-1 shrink-0 pt-1">
+                      <span className="font-mono text-xs font-bold text-[#C9A84C] tracking-widest">
+                        {reason.number}
+                      </span>
+                      <div className="w-px flex-1 bg-[#C9A84C]/20 group-hover:bg-[#C9A84C]/60 transition-colors duration-300 min-h-[40px]" />
+                    </div>
+                    {/* Content */}
+                    <div className="pb-1">
+                      <h3 className="font-serif text-xl lg:text-2xl font-bold text-[#0C1628] leading-snug mb-2">
+                        {reason.title}
+                      </h3>
+                      <p className="text-[#0C1628]/60 text-[0.9375rem] leading-relaxed">
+                        {reason.description}
+                      </p>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
             </div>
           </div>
 
-          {/* Right — sticky photo panel */}
-          <ScrollReveal className="hidden lg:block lg:sticky lg:top-28">
-            <div className="relative">
-              {/* Main image */}
-              <div className="relative h-[560px] overflow-hidden">
+          {/* Right — two-image stacked panel */}
+          <ScrollReveal className="hidden lg:block lg:sticky lg:top-24" delay={150}>
+            <div className="flex flex-col gap-3">
+
+              {/* Primary image — document on desk, cropped to document */}
+              <div className="relative h-[340px] overflow-hidden">
                 <Image
                   src="/images/document-sealed.png"
-                  alt="Sealed official document on desk"
+                  alt="Official sealed document on executive desk"
                   fill
-                  className="object-cover object-center"
-                  sizes="420px"
+                  className="object-cover object-[center_65%]"
+                  sizes="440px"
                 />
-                {/* Gold corner accent */}
-                <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#C9A84C]" />
-                <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#C9A84C]" />
+                {/* Gold top-left corner */}
+                <div className="absolute top-0 left-0 w-10 h-10 border-t-[3px] border-l-[3px] border-[#C9A84C]" />
               </div>
-              {/* Caption bar */}
-              <div className="bg-[#0C1628] px-6 py-4 flex items-center justify-between">
-                <span className="text-white/60 text-xs tracking-[0.2em] uppercase font-semibold">
-                  Jupiter, Florida
-                </span>
-                <span className="text-[#C9A84C] text-xs font-bold tracking-widest uppercase">
+
+              {/* Caption strip */}
+              <div className="bg-[#0C1628] px-5 py-3.5 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="block w-1 h-1 rounded-full bg-[#C9A84C]" />
+                  <span className="text-white/50 text-[10px] tracking-[0.22em] uppercase font-semibold">
+                    Jupiter, Florida
+                  </span>
+                </div>
+                <span className="text-[#C9A84C] text-[10px] font-bold tracking-[0.25em] uppercase">
                   Est. 2004
                 </span>
               </div>
-              {/* Second small image offset */}
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 overflow-hidden border-4 border-[#F7F4EE] shadow-xl hidden xl:block">
+
+              {/* Secondary image — international flags */}
+              <div className="relative h-[200px] overflow-hidden">
                 <Image
-                  src="/images/apostille-dark.png"
-                  alt="Apostille document in leather folder"
+                  src="/images/international-flags.png"
+                  alt="International flags on conference table representing global reach"
                   fill
-                  className="object-cover"
-                  sizes="160px"
+                  className="object-cover object-center"
+                  sizes="440px"
                 />
+                {/* Dark overlay with text */}
+                <div className="absolute inset-0 bg-[#0C1628]/50" />
+                <div className="absolute bottom-4 left-5 right-5">
+                  <p className="text-white/90 font-serif text-lg font-bold leading-tight">
+                    Documents accepted in<br />190+ countries worldwide
+                  </p>
+                </div>
+                {/* Gold bottom-right corner */}
+                <div className="absolute bottom-0 right-0 w-10 h-10 border-b-[3px] border-r-[3px] border-[#C9A84C]" />
               </div>
+
             </div>
           </ScrollReveal>
 
