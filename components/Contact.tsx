@@ -29,10 +29,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-[#F7F4EE]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left panel — dark navy */}
-          <div className="bg-[#0C1628] px-8 sm:px-12 lg:px-16 py-16 lg:py-24">
+          <div className="bg-[#0C1628] px-8 sm:px-12 lg:px-20 xl:px-28 py-16 lg:py-24">
             <ScrollReveal>
               <div className="flex items-center gap-4 mb-4">
                 <span className="block w-8 h-px bg-[#C9A84C]" />
@@ -126,7 +125,7 @@ export default function Contact() {
           </div>
 
           {/* Right panel — form */}
-          <div className="bg-white px-8 sm:px-12 lg:px-16 py-16 lg:py-24">
+          <div className="bg-white px-8 sm:px-12 lg:px-20 xl:px-28 py-16 lg:py-24">
             <ScrollReveal>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0C1628] mb-2">
                 Send Us a Message
@@ -238,7 +237,6 @@ export default function Contact() {
               </form>
             </ScrollReveal>
           </div>
-        </div>
       </div>
     </section>
   );
