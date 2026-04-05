@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
       </div>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px] gap-16 xl:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px] gap-16 xl:gap-24 items-stretch">
 
           {/* Left — header + numbered rows */}
           <div>
@@ -82,12 +82,12 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* Right — two-image stacked panel */}
-          <ScrollReveal className="hidden lg:block lg:sticky lg:top-24" delay={150}>
-            <div className="flex flex-col gap-3">
+          {/* Right — two-image panel, fills full height of left column */}
+          <ScrollReveal className="hidden lg:block" delay={150}>
+            <div className="flex flex-col gap-3 h-full min-h-[580px]">
 
-              {/* Primary image — document on desk, cropped to document */}
-              <div className="relative h-[340px] overflow-hidden">
+              {/* Primary image — grows to fill ~60% */}
+              <div className="relative flex-[3] min-h-[280px] overflow-hidden">
                 <Image
                   src="/images/document-sealed.png"
                   alt="Official sealed document on executive desk"
@@ -99,36 +99,21 @@ export default function WhyChooseUs() {
                 <div className="absolute top-0 left-0 w-10 h-10 border-t-[3px] border-l-[3px] border-[#C9A84C]" />
               </div>
 
-              {/* Caption strip */}
-              <div className="bg-[#0C1628] px-5 py-3.5 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="block w-1 h-1 rounded-full bg-[#C9A84C]" />
-                  <span className="text-white/50 text-[10px] tracking-[0.22em] uppercase font-semibold">
-                    Jupiter, Florida
-                  </span>
-                </div>
-                <span className="text-[#C9A84C] text-[10px] font-bold tracking-[0.25em] uppercase">
-                  Est. 2004
-                </span>
-              </div>
-
-              {/* Secondary image — international flags */}
-              <div className="relative h-[200px] overflow-hidden">
+              {/* Secondary image — international flags, fills ~40% */}
+              <div className="relative flex-[2] min-h-[180px] overflow-hidden">
                 <Image
                   src="/images/international-flags.png"
-                  alt="International flags on conference table representing global reach"
+                  alt="International flags representing global document acceptance"
                   fill
                   className="object-cover object-center"
                   sizes="440px"
                 />
-                {/* Dark overlay with text */}
                 <div className="absolute inset-0 bg-[#0C1628]/50" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <p className="text-white/90 font-serif text-lg font-bold leading-tight">
                     Documents accepted in<br />190+ countries worldwide
                   </p>
                 </div>
-                {/* Gold bottom-right corner */}
                 <div className="absolute bottom-0 right-0 w-10 h-10 border-b-[3px] border-r-[3px] border-[#C9A84C]" />
               </div>
 
