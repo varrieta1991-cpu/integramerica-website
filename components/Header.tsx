@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const PHONE_NUMBER = '(561) 317-9253';
 const PHONE_HREF = 'tel:+15613179253';
@@ -17,6 +18,9 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  const anchorPrefix = isHome ? '' : '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +41,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <div className="relative shrink-0 w-12 h-12 lg:w-14 lg:h-14 overflow-hidden">
               <Image
                 src="/logo.jpeg"
@@ -63,7 +67,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={`${anchorPrefix}${link.href}`}
                 className="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors"
               >
                 {link.label}
@@ -83,7 +87,7 @@ export default function Header() {
               {PHONE_NUMBER}
             </a>
             <a
-              href="#contact"
+              href={`${anchorPrefix}#contact`}
               className="border border-[#C9A84C]/60 hover:border-[#C9A84C] text-[#C9A84C] hover:text-white text-sm font-bold px-5 py-2.5 transition-colors duration-200"
             >
               Contact Us
@@ -125,7 +129,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={`${anchorPrefix}${link.href}`}
               onClick={() => setMenuOpen(false)}
               className="text-white/90 hover:text-[#C9A84C] font-medium text-base py-1 transition-colors border-b border-white/10 last:border-0"
             >
@@ -140,7 +144,7 @@ export default function Header() {
               Call: {PHONE_NUMBER}
             </a>
             <a
-              href="#contact"
+              href={`${anchorPrefix}#contact`}
               onClick={() => setMenuOpen(false)}
               className="bg-[#C9A84C] text-[#0C1628] font-bold text-base text-center py-3"
             >

@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
 
-const PHONE_HREF = 'tel:+15613179253';
-
 const services = [
   {
     number: '01',
@@ -11,7 +9,7 @@ const services = [
     detail:
       'We are leaders in Hague Apostille certification across all 50 states. Common documents include birth and death certificates, powers of attorney, corporate certifications, and educational diplomas. Cost-effective and reliable processing.',
     countriesHref: 'https://www.hcch.net/en/states/hcch-members',
-    href: PHONE_HREF,
+    learnMoreHref: '/apostille',
     image: '/images/apostille-certificate.png',
     imageAlt: 'Apostille certificate with gold seal',
   },
@@ -21,7 +19,6 @@ const services = [
     description: 'Consular certification for non-Hague nations worldwide',
     detail:
       'For countries not party to the Hague Convention, we handle full consular legalization by coordinating with the relevant embassy or consulate on your behalf from start to finish.',
-    href: PHONE_HREF,
     image: '/images/legalization-stamps.png',
     imageAlt: 'Bundle of officially stamped and sealed legalization documents',
   },
@@ -31,7 +28,6 @@ const services = [
     description: 'Legally precise translations for courts, embassies, and businesses',
     detail:
       'Our team of expert translators delivers culturally accurate, legally recognized certified translations for personal, legal, medical, and technical documents. Accepted by courts, consulates, and government agencies.',
-    href: PHONE_HREF,
     image: '/images/documents-wax.png',
     imageAlt: 'Official documents with wax seals on a desk',
   },
@@ -41,7 +37,6 @@ const services = [
     description: 'Expert guidance on all pathways to U.S. legal residency',
     detail:
       'We help you understand available options and connect you with the right process. Our team covers family-based, employment-based, asylum, diversity lottery, EB-5, U Visa, TPS, and more. We guide you every step of the way.',
-    href: PHONE_HREF,
     image: '/images/immigration-advisory.png',
     imageAlt: 'Passports and immigration documents with world map',
   },
@@ -104,7 +99,7 @@ export default function Services() {
                     </p>
                     <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                       <a
-                        href={service.href}
+                        href="/#contact"
                         className="inline-flex items-center gap-2 text-[#C9A84C] text-sm font-semibold hover:gap-3 transition-all duration-200 group/link"
                       >
                         Get a quote
@@ -112,6 +107,15 @@ export default function Services() {
                           &rarr;
                         </span>
                       </a>
+                      {service.learnMoreHref && (
+                        <a
+                          href={service.learnMoreHref}
+                          className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-xs font-medium transition-colors duration-200"
+                        >
+                          Learn more
+                          <span>&rarr;</span>
+                        </a>
+                      )}
                       {service.countriesHref && (
                         <a
                           href={service.countriesHref}

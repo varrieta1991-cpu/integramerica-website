@@ -128,7 +128,7 @@ export default function Hero() {
 
         {/* Floating review card */}
         <div className="hidden lg:block absolute bottom-12 right-12 w-80 opacity-0 animate-[fadeInUp_0.7s_cubic-bezier(0.22,1,0.36,1)_0.8s_forwards]">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 [transform:translateZ(0)] relative">
             {/* Stars */}
             <div className="flex gap-1 mb-3">
               {[...Array(5)].map((_, i) => (

@@ -31,8 +31,8 @@ export default function ServiceAreas() {
             </h2>
             <p className="text-[#0C1628]/65 text-base lg:text-lg leading-relaxed mb-8">
               Documents processed from every U.S. state. Clients located
-              nationwide and internationally — our physical office in Jupiter,
-              Florida serves as the hub for all state-level Apostille and
+              nationwide and internationally — our physical office in Florida
+              serves as the hub for all state-level Apostille and
               legalization processing.
             </p>
 
